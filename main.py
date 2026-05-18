@@ -150,7 +150,7 @@ def get_products_by_category(
     try:
         products = list(
             product_collection.find(
-                {"category": {"$regex": category, "$options": "i"}}
+                {"category": {"$regex": category, "$options": "i"}}#case sensitive search
             )
         )
 
